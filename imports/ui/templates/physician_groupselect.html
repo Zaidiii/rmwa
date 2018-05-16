@@ -1,0 +1,10 @@
+<template name="physician_groupselect">
+
+       <h1>Physician groupselect</h1>
+        {{#each getDiseaseGroups}}
+           <a data-tag={{diseaseGroup}} class="physician_group_select btn btn-primary btn-block">{{diseaseGroup}}</a>
+        {{/each}}
+
+        {{> logout }}
+
+</template>

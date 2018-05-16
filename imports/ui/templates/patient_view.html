@@ -1,0 +1,25 @@
+<template name="patient_view">
+       
+        {{> patient_addrecord }}
+      
+        <table class="table table-striped table-bordered table-responsive">
+                <caption>Patient view - Profile Group :  {{getProfileGroup}}</caption>
+                <thead>
+                  <tr>
+                    <th>Record_id</th>
+                    <th>Disease</th>
+                    <th>Reading</th>
+                    <th>Timestamp</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {{#each getPatientRecords}}
+                    {{ > record }}
+                    {{/each}}
+                </tbody>
+        </table>
+
+    {{> logout }}
+     
+</template>

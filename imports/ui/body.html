@@ -1,0 +1,43 @@
+<body>
+  
+    <div class="container">
+                
+      {{#if currentUser}}
+     
+          <!-- so we are now logged in -->
+          <!-- which template to display -->
+        
+          {{#if isPage 'physician_groupselect'}}
+            {{> physician_groupselect }}
+          {{/if}}
+
+          {{#if isPage 'physician_view'}}
+             {{> physician_view }}
+          {{/if}}
+        
+          {{#if isPage 'patient_view'}}
+            {{> patient_view }}
+          {{/if}}
+
+      {{else}}
+       
+          <!-- so we are not yet logged in -->
+          <!-- which template to display -->
+         
+           {{#if isPage 'login'}}
+              {{> login }}
+           {{/if}}
+
+           {{#if isPage 'physician_register'}}
+              {{> physician_register}}
+           {{/if}}
+
+           {{#if isPage 'patient_register'}}
+             {{> patient_register}}
+           {{/if}}
+         
+      {{/if}}
+
+    </div>
+
+  </body>

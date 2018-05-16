@@ -1,0 +1,11 @@
+<template name="record">
+                <tr>
+                            <td>{{_id}}</td>
+                            <td>{{disease_group}}</td>
+                            <td>{{reading}}</td>
+                            <td>{{timestamp}}</td>
+                            <td class="remarktd">
+                                <input data-tag={{_id}} type="text" value={{remarks}} class="remarkinput form-control" {{isDisabled}} />
+                            </td>
+                </tr>
+ </template>  

@@ -1,0 +1,25 @@
+<template name="physician_view">
+
+            <table class="table table-striped table-bordered">
+                <caption>Physician view - Profile  Group : {{getProfileGroup}}</caption>
+                <caption>Physician view - Selected Group : {{getSelectedGroup}}</caption>
+      
+                    <thead>
+                      <tr>
+                        <th>Record_id</th>
+                        <th>Disease</th>
+                        <th>Reading</th>
+                        <th>Timestamp</th>
+                        <th>Remarks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {{#each getPhysicianRecords}}
+                          {{ > record }}
+                        {{/each}}
+                    </tbody>
+            </table>
+     
+        {{> logout }}
+
+</template>
